@@ -18,10 +18,16 @@ const userColor = prompt(`Ultimo passaggio, ${userName}! Qual è il tuo colore p
 
 console.log(userColor, typeof userColor); // ShowInConsole ColorInput
 
+// NUMBER GENERATION
+
+let numGenerated = Math.floor(Math.random() * 11); // Number
+
+console.log(numGenerated, typeof numGenerated); // ShowInConsole NumberGenerated
+
 // PASSWORD GENERATION
 
 let pswGenerated = `
-  ${userName}${userSurname}${userColor}${"21"}
+  ${userName}${userSurname}${userColor}${numGenerated}
 `; // String
 
 // PASSWORD OUTPUT
