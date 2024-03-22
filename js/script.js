@@ -20,15 +20,19 @@ console.log(userColor, typeof userColor); // ShowInConsole ColorInput
 
 // NUMBER GENERATION
 
-let numGenerated = Math.floor(Math.random() * 11); // Number
+// let numGenerated = Math.floor(Math.random() * 100); // Number
+
+let numGenerated = getRndNumInteger(0, 99); // Number
+
+function getRndNumInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+};
 
 console.log(numGenerated, typeof numGenerated); // ShowInConsole NumberGenerated
 
 // PASSWORD GENERATION
 
-let pswGenerated = `
-  ${userName}${userSurname}${userColor}${numGenerated}
-`; // String
+let pswGenerated = `${userName}${userSurname}${userColor}${numGenerated}`; // String
 
 // PASSWORD OUTPUT
 
